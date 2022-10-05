@@ -1,0 +1,1 @@
+interface_segregation_principle.md

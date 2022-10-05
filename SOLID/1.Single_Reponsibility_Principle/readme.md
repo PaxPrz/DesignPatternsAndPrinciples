@@ -1,0 +1,1 @@
+single_responsibility_principle.md
