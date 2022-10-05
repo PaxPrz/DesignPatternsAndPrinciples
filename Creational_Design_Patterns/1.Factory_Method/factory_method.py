@@ -57,9 +57,9 @@ if __name__ == "__main__":
         raise ValueError("Invalid way")
     app.plan_delivery()
 
-'''
+"""
 In Factory Method Creational Pattern, the creation of Transport
 object is deligated to another class i.e. Logistics class.
 The overall logic for delivery in implemented on deliver method
 and the correct Transport is created by respective creation factory.
-'''
+"""
