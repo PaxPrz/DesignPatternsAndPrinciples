@@ -114,10 +114,10 @@ class DropBox:
         """get file from dropbox"""
 
 
-'''
+"""
 This principle focuses on segregation of interface so that
 a class only implements certain inteface to its full. Since DropBox
 now does not implement CloudHostingProvider or CDNProvider we now
 cannot pass DropBox instance to functions that use these object to create
 server or get CDN.
-'''
+"""
