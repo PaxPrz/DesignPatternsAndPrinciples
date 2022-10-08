@@ -117,33 +117,33 @@ class Director:
 
     def make(self, type: str):
         if type == "old":
-            result = self.builder.build_walls(
-                ["east", "west", "south"]
-            ).build_windows(
-                ["south"]
-            ).build_doors(
-                ["north"]
-            ).build_gate(
-                "north"
-            ).build_roof(
-                "chappri"
-            ).get_result()
+            result = (
+                self.builder.build_walls(["east", "west", "south"])
+                .build_windows(["south"])
+                .build_doors(["north"])
+                .build_gate("north")
+                .build_roof("chappri")
+                .get_result()
+            )
         else:
-            result = self.builder.build_walls(
-                ["east", "west"],
-            ).build_windows(
-                ["south", "west"],
-            ).build_doors(
-                ["east"]
-            ).build_gate(
-                "north",
-            ).build_roof(
-                "tile"
-            ).get_result()
+            result = (
+                self.builder.build_walls(
+                    ["east", "west"],
+                )
+                .build_windows(
+                    ["south", "west"],
+                )
+                .build_doors(["east"])
+                .build_gate(
+                    "north",
+                )
+                .build_roof("tile")
+                .get_result()
+            )
         return result
 
 
-'''
+"""
 According to this pattern, the creation of an class is assigned
 to a builder class. The builder has different methods according
 to which the instance can have different property after it's creation
@@ -152,7 +152,7 @@ HallBuilder and GarageBuilder. And accordingly build the respective
 object of Hall or Garage with its properties.
 Additionally, we can have a Director class, that store the base
 rules for creating object with specific properties.
-'''
+"""
 
 
 if __name__ == "__main__":
@@ -169,4 +169,3 @@ if __name__ == "__main__":
     director = Director(builder)
     result = director.make(choice)
     print(result)
-
