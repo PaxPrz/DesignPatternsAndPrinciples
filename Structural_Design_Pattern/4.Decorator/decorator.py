@@ -75,13 +75,13 @@ class CompressionDecorator(DataSourceDecorator):
         return data
 
 
-'''
+"""
 In this pattern, the base functionality of the class, i.e.
 data read and write is extended by the Decorator classes.
 The DataSourceDecorator wraps the FileDataSource and provides
 additional functionalities like encryption or compression to
 the data.
-'''
+"""
 
 
 if __name__ == "__main__":
